@@ -16,8 +16,13 @@
 
 /*:::: COLORS ::::*/
 
-@black: #0000;
-@white: #fff;
+@black: #353635;
+@gray: #DBDBDB;
+@white: #EEEEEE;
+@green: #9FD780;
+@blue: #8FB0D0;
+@yellow: #E9EA96;
+@orange: #F59D5F;
 
 /*:::: MIXINS ::::*/
 .screen-width {
@@ -62,23 +67,51 @@
 /* BACKGROUND GRADIENT MIXINS */
 
 .link-btn-bg {
-  
+  background: #f2c6ab; /* Old browsers */
+background: -moz-linear-gradient(top,  #f2c6ab 0%, #f59d5f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2c6ab), color-stop(100%,#f59d5f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f2c6ab 0%,#f59d5f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f2c6ab 0%,#f59d5f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f2c6ab 0%,#f59d5f 100%); /* IE10+ */
+background: linear-gradient(top,  #f2c6ab 0%,#f59d5f 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2c6ab', endColorstr='#f59d5f',GradientType=0 ); /* IE6-9 */
+
 }
 
 .link-btn-hvr {
-  
+  background: #cae0bc; /* Old browsers */
+background: -moz-linear-gradient(top,  #cae0bc 0%, #9fd780 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cae0bc), color-stop(100%,#9fd780)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cae0bc 0%,#9fd780 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cae0bc 0%,#9fd780 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cae0bc 0%,#9fd780 100%); /* IE10+ */
+background: linear-gradient(top,  #cae0bc 0%,#9fd780 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cae0bc', endColorstr='#9fd780',GradientType=0 ); /* IE6-9 */
+}
+
+.submit-bg {
+	background: #58595a; /* Old browsers */
+background: -moz-linear-gradient(top,  #58595a 0%, #9fa1a3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#58595a), color-stop(100%,#9fa1a3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #58595a 0%,#9fa1a3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #58595a 0%,#9fa1a3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #58595a 0%,#9fa1a3 100%); /* IE10+ */
+background: linear-gradient(top,  #58595a 0%,#9fa1a3 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58595a', endColorstr='#9fa1a3',GradientType=0 ); /* IE6-9 */
+
 }
 
 /*:::: TYPOGRAPHY ::::*/
  /* Hint: replace this comment with styles for each h, 1-6. Sizes for each need specification */
 h1, h2, h3, h4, h5, h6 {
-	font-family: Helvetica, Tahoma, sans-serif;
+	font-family: 'Patua One', Times sans-serif;
   font-weight: bold;
   line-height: 30px;
-  color: ;
+  color: @black;
 }
 
 p {
+  font-family: 'Muli', Helvetica, 'Droid Sans', Tahoma, sans-serif;
   font-size: 15px;
   line-height: 24px;
 }
@@ -113,6 +146,127 @@ h1 {
   line-height: 58px;
 }
 
+/*:::: FORMs ::::*/
+
+textarea {
+  .border-radius(6px);
+}
+
+input[type=text], input[type=email], input[type=password] {
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @yellow);
+  border: 1px solid @black;
+  margin-bottom: 9px;
+}
+
+input[type=submit] {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 5px;
+  margin-left: 145px;
+  padding: 10px;
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @black);
+  border: 1px solid @white;
+  .submit-bg;
+  font-family: 'Patua One', Times, serif;
+  color: @white;
+  .text-shadow(0, 1px, 1px, @black);
+}
+
+/**************************************\
+|* THE REST OF YOUR STYLES BELOW HERE *|
+\**************************************/
+
+header {
+	background: @gray;
+	border-bottom: 2px solid @orange;
+	.box-shadow(0, 0, 6px, @black);
+}
+
+#main-container {
+	background: @white;
+}
+
+a, a:visited {
+	color: @blue;
+	.text-shadow(0, 1px, 1px, @black);
+	text-decoration: none;
+	background: @yellow;
+}
+
+a:hover {
+	background: none;
+}
+
+#users {
+	text-align: center;
+	background-image: url('../img/design/ubg.png');
+	padding-bottom: 60px;
+	border-top: 2px solid @blue;
+	border-bottom: 2px solid @blue;
+	.box-shadow(0, 0, 4px, @black);
+}
+
+#users h5 {
+	color: @white;
+	.text-shadow(0, -1px, 1px, @black);
+}
+
+#users a {
+	text-decoration: none;
+	background: none;
+}
+
+#users img:hover {
+	border: 2px solid @yellow;
+	.box-shadow(0, 0, 10px, @yellow);
+}
+
+#users img {
+	border: 2px solid @blue;
+	.box-shadow(0, 0, 5px, @black);
+}
+
+#usage {
+	background-image: url('../img/design/fbg.png');
+	border-top: 2px solid @green;
+	.box-shadow(0, 0, 5px, @black);
+}
+
+footer {
+	border-top: 2px solid @yellow;
+	.box-shadow(0, 0, 5px, @black);
+	background-image: url('../img/design/ubg.png');
+	color: @white;
+	text-align: center;
+}
+
+footer a {
+	background: none;
+}
+
+footer a:hover {
+	.text-shadow(0, 0, 5px, @white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*:::: BUTTONS ::::*/
 
 /* For styling links as buttons */
@@ -120,42 +274,258 @@ h1 {
   padding: 10px;
   color: @white;
   .border-radius(10px);
-  border: 1px solid @white;
+  border: 1px solid @orange;
+  .link-btn-bg;
+  font-family: 'Patua One', 'Times', serif;
+  font-size: 17px;
+  .text-shadow(0, 1px, 1px, @black);
+  .box-shadow(0, 0, 3px, @black);
 }
 
-/*:::: FORMs ::::*/
-
-textarea {
-  
+.link-button:hover {
+	.link-btn-hvr;
+	.text-shadow(0, -1px, 1px, @white);
+	color: @black;
+	border: 1px solid @green;
 }
 
-input[type=text], input[type=email], input[type=password] {
-  
+/*:::: SYNTAX HIGHLIGHTING ::::*/
+
+.sh_greenlcd{
+	background:none; padding:0; margin:0; border:0 none;
 }
 
-input[type=submit] {
-  
+.sh_greenlcd .sh_sourceCode{
+	background-color:@black;color:@white;font-weight:normal;font-style:normal;
 }
 
-/**************************************\
-|* THE REST OF YOUR STYLES BELOW HERE *|
-\**************************************/
+.sh_greenlcd .sh_sourceCode .sh_keyword{
+	color:@blue;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_type{
+	color:@orange;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_string{
+	color:@green;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_regexp{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_specialchar{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_comment{
+	color:@white;font-weight:normal;font-style:italic;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_number{
+	color:#fff;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_preproc{
+	color:#bfbfbf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_symbol{
+	color:#2fe7a9;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_function{
+	color:#c0ff73;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_cbracket{
+	color:#2fe7a9;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_url{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_date{
+	color:#00ed00;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_time{
+	color:#00ed00;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_file{
+	color:#00ed00;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_ip{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_name{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_variable{
+	color:#beef13;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_oldfile{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_newfile{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_difflines{
+	color:#00ed00;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_selector{
+	color:#beef13;font-weight:normal;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_property{
+	color:@green;font-weight:bold;font-style:normal;
+}
+
+.sh_greenlcd .sh_sourceCode .sh_value{
+	color:#dfdfdf;font-weight:normal;font-style:normal;
+}
 
 
 
+.snippet-wrap {
+	position:relative;
+}
 
+*:first-child+html .snippet-wrap {
+	display:inline-block;
+}
 
+* html .snippet-wrap {
+	display:inline-block;
+}
 
+.snippet-reveal{
+	text-decoration:underline;
+}
 
+.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide {
+	position:absolute; top:10px; right:15px; font-size:.9em;z-index:1;background-color:transparent;
+}
 
+.snippet-wrap .snippet-hide {
+	top:auto; bottom:10px;
+}
 
+*:first-child+html .snippet-wrap .snippet-hide {
+	bottom:25px;
+}
 
+* html .snippet-wrap .snippet-hide {
+	bottom:25px;
+}
 
+.snippet-wrap .snippet-menu pre, .snippet-wrap .snippet-hide pre {
+	background-color:transparent; margin:0; padding:0;
+}
 
+.snippet-wrap .snippet-menu a, .snippet-wrap .snippet-hide a {
+	padding:0 5px; text-decoration:underline;
+}
 
+.snippet-wrap pre.sh_sourceCode{
+	padding:1em;line-height:1.8em;overflow:auto;position:relative;
+	.border-radius(15px);
+	.box-shadow(0, 0, 10px, @black);
+}
 
+.snippet-wrap pre.snippet-textonly {
+	padding:2em;
+}
 
+*:first-child+html .snippet-wrap pre.snippet-formatted {
+	padding:2em 1em;
+}
 
+* html .snippet-wrap pre.snippet-formatted {
+	padding:2em 1em;
+}
+
+.snippet-reveal pre.sh_sourceCode {
+	padding:.5em 1em; text-align:right;
+}
+
+.snippet-wrap .snippet-num li{
+	padding-left:1.5em;
+}
+
+.snippet-wrap .snippet-no-num{
+	list-style:none; padding:.6em 1em; margin:0;
+}
+
+.snippet-wrap .snippet-no-num li {
+	list-style:none; padding-left:0;
+}
+
+.snippet-wrap .snippet-num {
+	margin:1em 0 1em 1em; padding-left:3em;
+}
+
+.snippet-wrap .snippet-num li {
+	list-style:decimal-leading-zero outside none;
+}
+
+.snippet-wrap .snippet-no-num li.box {
+	padding:0 6px; margin-left:-6px;
+}
+
+.snippet-wrap .snippet-num li.box {
+	border:1px solid; list-style-position:inside; margin-left:-3em; padding-left:6px;
+}
+
+*:first-child+html .snippet-wrap .snippet-num li.box {
+	margin-left:-2.4em;
+}
+
+* html .snippet-wrap .snippet-num li.box {
+	margin-left:-2.4em;
+}
+
+.snippet-wrap li.box-top {
+	border-width:1px 1px 0 !important;
+}
+
+.snippet-wrap li.box-bot {
+	border-width:0 1px 1px !important;
+}
+
+.snippet-wrap li.box-mid {
+	border-width:0 1px !important;
+}
+
+.snippet-wrap .snippet-num li .box-sp {
+	width:18px; display:inline-block;
+}
+
+*:first-child+html .snippet-wrap .snippet-num li .box-sp {
+	width:27px;
+}
+
+* html .snippet-wrap .snippet-num li .box-sp {
+	width:27px;
+}
+
+.snippet-wrap .snippet-no-num li.box {
+	border:1px solid;
+}
+
+.snippet-wrap .snippet-no-num li .box-sp {
+	display:none;
+}
 
 /*:::: HELPER CLASSES ::::*/
 

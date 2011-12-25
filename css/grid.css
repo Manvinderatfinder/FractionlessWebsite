@@ -1,15 +1,3 @@
-/**********************************************************\
- * Fraction.less GRID - Compiled from grid.less			  *	
- *														  *
- * This is the compiled grid.less file. It is recommended *
- * that you take advantage of the built in LESS support	  *
- * but you are free to use this regular CSS file instead. *
- * 														  *
- * Please note that this file is minified. See the .less  *
- * version for fully commented, readable, detailed code.  *
- *														  *
- \*********************************************************/
-
 .centered{margin-right:auto;margin-left:auto;}
 .full-width{display:block;width:1140px;padding-left:20px;padding-right:20px;margin-right:auto;margin-left:auto;}
 .one-half{display:block;width:540px;margin-right:20px;}
