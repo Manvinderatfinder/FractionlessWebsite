@@ -20,8 +20,8 @@ if(isset($_POST['submit'])) {
 				
 				// Sanitize and validate
 				// Set the POST info as variables
-				$senderEmail = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-				$senderMessage = filter_var($_POST['message'], FILTER_SANITIZE_EMAIL);
+				$senderEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+				$senderMessage = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 			}
 		}
 
