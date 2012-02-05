@@ -161,30 +161,34 @@
 				<article id="code" class="one-half">
 					<h3>Example code</h3>
 					<pre class="htmlCode">
-&lt;header&gt;
-	&lt;article class="two-thirds centered"&gt;
-        &lt;!-- Centered 720px block --&gt;
-    &lt;/article&gt;
+&lt;header class="container"&gt;
+	&lt;section class="row"&gt;
+    	&lt;article class="one centered"&gt;
+            &lt;!-- Block of centered content --&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
 &lt;/header&gt;
-&lt;section class="full-width clearfix"&gt;
-    &lt;article class="one-third left"&gt;
-        &lt!-- 1/3 width bucket --&gt;
-    &lt;/article&gt;
-	&lt;article class="one-third left"&gt;
-		&lt;!-- Bucket 2, Row 1 --&gt;
-	&lt;/article&gt;
-	&lt;article class="one-third left last"&gt;
-		&lt!-- Bucket 3, Row 1 --&gt;
-	&lt;/article&gt;
+&lt;section class="container">
+    &lt;section class="row"&gt;
+        &lt;article class="one-third"&gt;
+            &lt!-- 1/3 width bucket --&gt;
+        &lt;/article&gt;
+	    &lt;article class="one-third"&gt;
+		    &lt;!-- Bucket 2, Row 1 --&gt;
+	    &lt;/article&gt;
+	    &lt;article class="one-third last"&gt;
+		    &lt!-- Bucket 3, Row 1 --&gt;
+	    &lt;/article&gt;
+    &lt;section&gt;
 &lt;/section&gt;</pre>
 				</article>
 				<article class="one-quarter last">
 					<h3>Just add it up</h3>
 					<p>
-					The Fraction.less grid works using a few simple, easy to remember classes. If you can add simple fractions (or spare change) then you can have a page layout up in 5 minutes or less! Here's how it works: you create a container element and fill it with elements with classes that add up to 1. Classes in Fraction.less are named after fractions so it's easy! For example: <code>.one-quarter</code> + <code>.one-half</code> + <code>.one-quarter</code> = 1 = <code>.full-width</code> 
+					The Fraction.less grid works using a few simple, easy to remember classes. If you can add simple fractions (or spare change) then you can have a page layout up in 5 minutes or less! Here's how it works: you create a container element that holds an unlimited number of rows and fill it with elements with class names that add up to 1. Classes in Fraction.less are named after fractions so it's easy! For example: <code>.one-quarter</code> + <code>.one-half</code> + <code>.one-quarter</code> = 1 = <code>.full-width</code> 
 					</p>
 					<p>
-					In addition to the fractional classes you'll also want to add a directional class (<code>.left</code> or <code>.right</code>). The last element in each row gets a <code>.last</code> class. That's all there is to it.
+					The <code>.container</code> class is perfect for blocks of elements needing full-screen backgrounds and <code>.row</code>s are good for, well... creating rows. So be sure to wrap your fractions around a <code>.container</code> and <code>.row</code> (in that order). The last element in each row gets a <code>.last</code> class. That's all there is to it.
 					</p>
 				</article>
 			</section>
@@ -214,18 +218,8 @@
 				<article class="one-third last">
 					<h5>Get in touch</h5>
 					<p>
-					Want to contribute? Have a question? Found a bug? File issues on <a href="https://github.com/billpatrianakos/Fractionless-Boilerplate/">GitHub</a> or use this form to get in touch about anything else.
+					Want to contribute? Have a question? Found a bug? File issues on <a href="https://github.com/billpatrianakos/Fractionless-Boilerplate/">GitHub</a> or email bill[at]chooseclever[dot]com to get in touch about anything else.
 					</p>
-					<fieldset>
-						<form method="post" action="scripts/request.php">
-							<label for="email">Email: </label><input type="email" name="email" placeholder="you@email.com" />
-							<br />
-							<label for="message">Message:</label> 
-							<textarea name="message" rows="4" cols="20"></textarea>
-							<br />
-							<input name="submit" type="submit" value="Send" />
-						</form>
-					</fieldset>
 				</article>
 			</section>
 		</section>

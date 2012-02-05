@@ -9,7 +9,7 @@ set :application, "production"
 #set :repository, "file://#{File.expand_path('.')}"
 
 # or use a hosted repository
-set :repository, "git@github.com:billpatrianakos/Fractionless-Boilerplate.git"
+set :repository, "git@github.com:Clever-Web-Design/FractionlessWebsite.git"
 
 server "#{domain}", :app, :web, :db, :primary => true
 
